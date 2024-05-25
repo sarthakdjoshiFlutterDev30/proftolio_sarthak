@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "191326085430",
+    "project_id": "protfolio-8e65b",
+    "storage_bucket": "protfolio-8e65b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191326085430:android:9cf840b262df2251e3d397",
+        "android_client_info": {
+          "package_name": "com.example.protfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuLRhB_kt_-QHDT6bEJoLe2IdHsWKbtuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191326085430:android:4f8535dd772e0782e3d397",
+        "android_client_info": {
+          "package_name": "com.example.protfolio_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuLRhB_kt_-QHDT6bEJoLe2IdHsWKbtuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191326085430:android:e3d2b45fb29927cae3d397",
+        "android_client_info": {
+          "package_name": "com.example.protfolio_sarthak"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuLRhB_kt_-QHDT6bEJoLe2IdHsWKbtuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

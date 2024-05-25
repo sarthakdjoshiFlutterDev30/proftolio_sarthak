@@ -1,0 +1,107 @@
+import 'package:flutter/material.dart';
+
+class Protfolio_Page extends StatefulWidget {
+  const Protfolio_Page({super.key});
+
+  @override
+  State<Protfolio_Page> createState() => _Protfolio_PageState();
+}
+
+class _Protfolio_PageState extends State<Protfolio_Page> {
+  List<Image> image = [
+    Image.asset("asset/images/Flutter.png"),
+    Image.asset("asset/images/Dart.png"),
+    Image.asset("asset/images/Firebase.png"),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: InteractiveViewer(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                color: Colors.black,
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 10),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            'Hello My Name Is Sarthak ',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 32,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        CircleAvatar(
+                          radius: 60,
+                          backgroundImage: AssetImage("asset/images/photo.jpg"),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Skills : App Development, Web Development ",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    ExpansionTile(
+                      title: const Text(
+                        "What Can I Do",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      children: [
+                        Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing: 10.0,
+                          children: [
+                            for (var img in image)
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.3,
+                                height: MediaQuery.of(context).size.width * 0.3,
+                                child: img,
+                              ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.pinkAccent,
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text(
+                      "Resume",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      child: Image.asset(
+                        "asset/images/resume_sarthak_joshi_page-0001.jpg",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
