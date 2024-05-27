@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Protfolio_Page extends StatefulWidget {
   const Protfolio_Page({super.key});
@@ -95,6 +96,22 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                         fit: BoxFit.contain,
                       ),
                     ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height*0.01,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width*0.2,
+                      child: ElevatedButton(
+                        onPressed: (){
+                          launchURL("https://drive.google.com/file/d/1-LIz7avkblTbckxO4NbcAeIlBbQ-kVZk/view?usp=drive_link");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.indigo,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.zero)),
+                        child: const Text("Download",style: TextStyle(color: Colors.white),),
+                      )
+                    ),
                   ],
                 ),
               ),
@@ -103,5 +120,13 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
         ),
       ),
     );
+  }
+}
+
+launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
