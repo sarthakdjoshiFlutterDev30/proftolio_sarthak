@@ -97,21 +97,53 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                       ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height*0.01,
+                      height: MediaQuery.of(context).size.height * 0.01,
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width*0.2,
-                      child: ElevatedButton(
-                        onPressed: (){
-                          launchURL("https://drive.google.com/file/d/1-TKEt2VXkgzN0AqHvh30aaqY6c74KubS/view?usp=drive_link");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigo,
-                          shape: const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.zero)),
-                        child: const Text("Download",style: TextStyle(color: Colors.white),),
-                      )
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            launchURL(
+                                "https://drive.google.com/file/d/1-_c1yZKrcLPyGZ2Gx9kMrXtb9s3pHqYv/view?usp=drive_link");
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.indigo,
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero)),
+                          child: const Text(
+                            "Download Resume",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
                     ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      child: Image.asset(
+                        "asset/images/Exp-Certificate.jpg",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.01,
+                    ),
+                    SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            launchURL(
+                                "https://drive.google.com/file/d/1-YO6w29FuIBUq_p_uQ5u4j3FR85nLn5-/view?usp=drive_link");
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.indigo,
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero)),
+                          child: const Text(
+                            "Download Experience Certificate",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )),
                   ],
                 ),
               ),
