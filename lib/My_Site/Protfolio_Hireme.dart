@@ -1,8 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
-import 'package:email_validator/email_validator.dart';
 
 class Protfolio_Hire extends StatefulWidget {
   const Protfolio_Hire({super.key});
@@ -114,11 +114,12 @@ class _Protfolio_HireState extends State<Protfolio_Hire> {
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 ElevatedButton(
                   onPressed: () {
-                    final bool isValidEmail = EmailValidator.validate(_emailController.text.toString());
+                    final bool isValidEmail = EmailValidator.validate(
+                        _emailController.text.toString());
                     isValidEmail
                         ? add()
                         : ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text("Add Proper Email")));
+                            const SnackBar(content: Text("Add Proper Email")));
                   },
                   child: const Text("Submit"),
                 ),
