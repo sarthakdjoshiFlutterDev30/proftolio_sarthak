@@ -10,12 +10,16 @@ class Protcolilo_Project extends StatefulWidget {
 
 class _Protcolilo_ProjectState extends State<Protcolilo_Project> {
   final List<String> links = [
-    "https://github.com/sarthakdjoshi/collegemgt",
+    "https://github.com/sarthakdjoshi/collegemgt_admin",
+    "https://github.com/sarthakdjoshi/collegemgt_student",
+    "https://github.com/sarthakdjoshi/collegemgt_teacher",
     "https://github.com/sarthakdjoshi/Intership_Project",
     "https://github.com/sarthakdjoshi/Users"
   ];
   final List<String> projectName = [
-    "college management",
+    "College Management Admin",
+    "College Management Student",
+    "College Management Teacher",
     "E-Commerce Admin App",
     "E-Commerce User App"
   ];

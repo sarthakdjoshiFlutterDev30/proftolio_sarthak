@@ -13,6 +13,7 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
     Image.asset("asset/images/Flutter.png"),
     Image.asset("asset/images/Dart.png"),
     Image.asset("asset/images/Firebase.png"),
+    Image.asset("asset/images/FCM.png"),
   ];
 
   @override
@@ -91,9 +92,22 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.8,
-                      child: Image.asset(
-                        "asset/images/resume_sarthak_joshi_page-0001.jpg",
-                        fit: BoxFit.contain,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "asset/images/SarthakJoshi_Resume_FlutterDeveloper_pages-to-jpg-0001.jpg",
+
+                            fit: BoxFit.contain,
+                          ),
+                          SizedBox(width:MediaQuery.of(context).size.width * 0.01,
+                        ),
+                          Image.asset(
+                            "asset/images/SarthakJoshi_Resume_FlutterDeveloper_pages-to-jpg-0002.jpg",
+
+                            fit: BoxFit.contain,
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
