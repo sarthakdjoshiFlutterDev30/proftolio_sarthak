@@ -92,15 +92,11 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.8,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: PageView(
                         children: [
                           Image.asset(
                             "asset/images/SarthakJoshi_Resume_FlutterDeveloper_pages-to-jpg-0001.jpg",
                             fit: BoxFit.contain,
-                          ),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.01,
                           ),
                           Image.asset(
                             "asset/images/SarthakJoshi_Resume_FlutterDeveloper_pages-to-jpg-0002.jpg",
