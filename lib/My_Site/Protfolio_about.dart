@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Protfolio_About extends StatefulWidget {
@@ -8,6 +11,7 @@ class Protfolio_About extends StatefulWidget {
 }
 
 class _Protfolio_AboutState extends State<Protfolio_About> {
+  final double fontSize = kIsWeb ? 32 : (Platform.isAndroid || Platform.isIOS ? 23 : 32);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +31,7 @@ class _Protfolio_AboutState extends State<Protfolio_About> {
                     Text(
                       'Headline',
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.06,
+                        fontSize:fontSize,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
@@ -48,7 +52,7 @@ class _Protfolio_AboutState extends State<Protfolio_About> {
                     Text(
                       'Passionate Flutter Developer | Crafting Engaging Cross-Platform Experiences | Innovating in Mobile App Development',
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.04,
+                        fontSize:fontSize,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
@@ -69,7 +73,7 @@ class _Protfolio_AboutState extends State<Protfolio_About> {
                     Text(
                       'About Me',
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.06,
+                        fontSize:fontSize,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
@@ -93,7 +97,7 @@ class _Protfolio_AboutState extends State<Protfolio_About> {
                       'I am a detail-oriented and results-driven professional, who thrives in fast-paced and challenging environments. With a strong background in software engineering, I possess a deep understanding of the entire app development lifecycle, from conceptualization to deployment. I am well-versed in agile methodologies and have a proven track record of delivering projects within tight deadlines while maintaining the highest quality standards.\n\n'
                       'Apart from my technical skills, I am a great team player and possess excellent communication skills. I believe in collaborating with my colleagues and clients to understand their requirements and deliver solutions that meet their expectations. My ability to adapt to new technologies and think outside the box has helped me.',
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.035,
+                        fontSize:fontSize,
                         color: Colors.white,
                       ),
                     ),
