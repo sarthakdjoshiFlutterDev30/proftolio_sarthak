@@ -7,7 +7,8 @@ class Protfolio_Link extends StatelessWidget {
   final List<String> links = [
     "https://github.com/sarthakdjoshi",
     "https://www.linkedin.com/in/sarthak-joshi-91724019b/",
-    "mailto:joshisarthakdjoshi556@gmail.com"
+    "mailto:joshisarthakdjoshi556@gmail.com",
+    "https://discord.com/channels/870179011073036380/1287652523460661319"
   ];
 
   @override
@@ -49,6 +50,18 @@ class Protfolio_Link extends StatelessWidget {
                   backgroundImage: AssetImage("asset/images/gmail.png"),
                 ),
                 title: const Text("joshisarthakdjoshi556@gmail.com"),
+              ),
+              const Divider(
+                height: 10,
+              ),
+              ListTile(
+                onTap: () {
+                  launchURL(links[3]);
+                },
+                leading: const CircleAvatar(
+                  backgroundImage: AssetImage("asset/images/Discord.png"),
+                ),
+                title: const Text("All Project Info. In Discoed Channel"),
               ),
             ],
           ),
