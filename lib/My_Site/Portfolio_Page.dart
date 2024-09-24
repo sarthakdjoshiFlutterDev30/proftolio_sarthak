@@ -113,7 +113,7 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                         child: ElevatedButton(
                           onPressed: () {
                             launchURL(
-                                "https://drive.google.com/file/d/1-zDYCW4NoYBG6-c7EY1lmrWdcmShjl7W/view?usp=drive_link");
+                                "https://drive.google.com/file/d/106c_XTF4ULyX5oKF7w2kwsONaMM31hu0/view?usp=drive_link");
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.indigo,
@@ -142,7 +142,7 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                         child: ElevatedButton(
                           onPressed: () {
                             launchURL(
-                                "https://drive.google.com/file/d/1-zDYCW4NoYBG6-c7EY1lmrWdcmShjl7W/view?usp=drive_link");
+                                "https://drive.google.com/file/d/1-YO6w29FuIBUq_p_uQ5u4j3FR85nLn5-/view?usp=drive_link");
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.indigo,
@@ -150,6 +150,64 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                                   borderRadius: BorderRadius.zero)),
                           child: const Text(
                             "Download Experience Certificate",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      child: Image.asset(
+                        "asset/images/Sarthak_Joshi_Powerbi_Texhtip24_Certificate.jpg",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.01,
+                    ),
+                    SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            launchURL(
+                                "https://drive.google.com/file/d/103uwzKxorGottTwpzK_xrhgSbTrALUNw/view?usp=drive_link");
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.indigo,
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero)),
+                          child: const Text(
+                            "Download PowerBi Certificate",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      child: Image.asset(
+                        "asset/images/Sarthak_Joshi_Powerbi_Greate_Leaning_Certificate_page-0001.jpg",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.01,
+                    ),
+                    SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            launchURL(
+                                "https://drive.google.com/file/d/106HrmZ4flZQeDdni5c96XfjHil0XBEK_/view?usp=drive_link");
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.indigo,
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero)),
+                          child: const Text(
+                            "Download PowerBi Certificate",
                             style: TextStyle(color: Colors.white),
                           ),
                         )),
