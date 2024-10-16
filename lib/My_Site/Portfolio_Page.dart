@@ -153,64 +153,6 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                             style: TextStyle(color: Colors.white),
                           ),
                         )),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.02,
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.8,
-                      child: Image.asset(
-                        "asset/images/Sarthak_Joshi_Powerbi_Texhtip24_Certificate.jpg",
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.2,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            launchURL(
-                                "https://drive.google.com/file/d/103uwzKxorGottTwpzK_xrhgSbTrALUNw/view?usp=drive_link");
-                          },
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.indigo,
-                              shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.zero)),
-                          child: const Text(
-                            "Download PowerBi Certificate",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        )),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.02,
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.8,
-                      child: Image.asset(
-                        "asset/images/Sarthak_Joshi_Powerbi_Greate_Leaning_Certificate_page-0001.jpg",
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.2,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            launchURL(
-                                "https://drive.google.com/file/d/106HrmZ4flZQeDdni5c96XfjHil0XBEK_/view?usp=drive_link");
-                          },
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.indigo,
-                              shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.zero)),
-                          child: const Text(
-                            "Download PowerBi Certificate",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        )),
                   ],
                 ),
               ),
