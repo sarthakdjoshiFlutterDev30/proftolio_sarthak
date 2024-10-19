@@ -19,7 +19,6 @@ class _ProtfolioCertificatesState extends State<ProtfolioCertificates> {
 
   // List of Google Drive URLs for certificates
   List<String> driveUrls = [
-    // Resume
     "https://drive.google.com/file/d/1-YO6w29FuIBUq_p_uQ5u4j3FR85nLn5-/view?usp=drive_link", // Experience Certificate
     "https://drive.google.com/file/d/1PSkeNG029EyH-QgC_hQ91PSnG9FGyFu2/view?usp=drive_link", // Letter of Recommendation
     "https://drive.google.com/file/d/103uwzKxorGottTwpzK_xrhgSbTrALUNw/view?usp=drive_link", // Power BI Certificate Tech tip 24
