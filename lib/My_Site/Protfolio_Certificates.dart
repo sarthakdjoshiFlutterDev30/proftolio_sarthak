@@ -15,6 +15,7 @@ class _ProtfolioCertificatesState extends State<ProtfolioCertificates> {
     "asset/images/LOR_Joshi_Sarthak_Flutter_page-0001.jpg",
     "asset/images/Sarthak_Joshi_Powerbi_Texhtip24_Certificate.jpg",
     "asset/images/Sarthak_Joshi_Powerbi_Greate_Leaning_Certificate_page-0001.jpg",
+    "asset/images/Accenture_page-0001.jpg"
   ];
 
   // List of Google Drive URLs for certificates
@@ -23,6 +24,7 @@ class _ProtfolioCertificatesState extends State<ProtfolioCertificates> {
     "https://drive.google.com/file/d/1PSkeNG029EyH-QgC_hQ91PSnG9FGyFu2/view?usp=drive_link", // Letter of Recommendation
     "https://drive.google.com/file/d/103uwzKxorGottTwpzK_xrhgSbTrALUNw/view?usp=drive_link", // Power BI Certificate Tech tip 24
     "https://drive.google.com/file/d/106HrmZ4flZQeDdni5c96XfjHil0XBEK_/view?usp=drive_link", // Power BI Certificate Great Learning
+    "https://drive.google.com/file/d/1--NSFCPQ8F14KtY-kBT4rEmhB6Tp7X6i/view?usp=sharing", //Accenture Certificate
   ];
 
   @override
