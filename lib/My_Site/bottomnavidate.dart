@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:protfolio_sarthak/My_Site/Portfolio_Page.dart';
 import 'package:protfolio_sarthak/My_Site/Protfolio_Certificates.dart';
 import 'package:protfolio_sarthak/My_Site/Protfolio_Hireme.dart';
@@ -83,11 +84,11 @@ class _BottomnavigateState extends State<Bottomnavigate> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.abc),
+              icon: Icon(FontAwesomeIcons.certificate),
               label: 'Certificate',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.self_improvement),
+              icon: Icon(FontAwesomeIcons.medal),
               label: 'About',
             ),
             BottomNavigationBarItem(
@@ -95,7 +96,7 @@ class _BottomnavigateState extends State<Bottomnavigate> {
               label: 'Link',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.work),
+              icon: Icon(FontAwesomeIcons.hireAHelper),
               label: 'Hire Me',
             ),
             BottomNavigationBarItem(

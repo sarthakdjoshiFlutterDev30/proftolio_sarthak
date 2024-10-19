@@ -40,6 +40,8 @@ dependencies:
   uuid: ^4.4.0
   email_validator: ^3.0.0
   url_launcher: ^6.2.6
+  flutter_launcher_icons: ^0.14.1
+  font_awesome_flutter: ^10.7.0
 
 dev_dependencies:
   flutter_test:
