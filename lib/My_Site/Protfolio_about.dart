@@ -52,7 +52,7 @@ class _Protfolio_AboutState extends State<Protfolio_About> {
                   children: [
                     const SizedBox(height: 10),
                     Text(
-                      'Passionate Flutter Developer | Crafting Engaging Cross-Platform Experiences | Innovating in Mobile App Development',
+                      "Flutter Developer | Firebase & REST API Integration | Cross-Platform App Specialist | Data-Driven Problem Solver | Open to Opportunities",
                       style: TextStyle(
                         fontSize: fontSize,
                         color: Colors.white,
@@ -94,10 +94,10 @@ class _Protfolio_AboutState extends State<Protfolio_About> {
                   children: [
                     const SizedBox(height: 10),
                     Text(
-                      'As a highly skilled Flutter developer from Bhavnagar, I am driven by a passion for creating innovative and user-friendly mobile applications. I have honed my skills and expertise in developing cutting-edge solutions for a diverse range of clients.\n\n'
-                      'My journey in the field of mobile app development began with a keen interest in technology and coding. Over the years, I have continuously upgraded my skills and knowledge to keep up with the ever-evolving industry. My proficiency in Flutter, a cross-platform development framework, allows me to create robust and high-performing apps for both Android and iOS platforms.\n\n'
-                      'I am a detail-oriented and results-driven professional, who thrives in fast-paced and challenging environments. With a strong background in software engineering, I possess a deep understanding of the entire app development lifecycle, from conceptualization to deployment. I am well-versed in agile methodologies and have a proven track record of delivering projects within tight deadlines while maintaining the highest quality standards.\n\n'
-                      'Apart from my technical skills, I am a great team player and possess excellent communication skills. I believe in collaborating with my colleagues and clients to understand their requirements and deliver solutions that meet their expectations. My ability to adapt to new technologies and think outside the box has helped me.',
+                      'As a highly skilled Flutter developer from Bhavnagar, I am driven by a passion for creating innovative and user-friendly mobile applications. My expertise lies in crafting high-performing apps that blend functionality with exceptional design, delivering impactful solutions for diverse clients.\n\n'
+                          'My journey in mobile app development began with a fascination for technology and problem-solving. Over the years, I have honed my skills in Flutter, Dart, Firebase, and REST API integration, enabling me to create robust cross-platform applications for Android and iOS. I am also proficient with tools like Power BI and Razorpay payment gateway, further broadening the scope of my development capabilities.\n\n'
+                          'With a strong foundation in software engineering, I excel at navigating the entire app development lifecycle—from ideation to deployment. I am detail-oriented, results-driven, and thrive in dynamic, fast-paced environments. My experience includes delivering real-time features such as audio/video calling and messaging, showcased in my e-commerce platforms, chat apps, and college management systems.\n\n'
+                          'Beyond my technical skills, I am an excellent collaborator with strong communication abilities. I work closely with clients and teammates to understand their requirements, ensuring solutions align with their expectations. My adaptability, innovative thinking, and commitment to quality make me a valuable contributor to any team.',
                       style: TextStyle(
                         fontSize: fontSize,
                         color: Colors.white,
