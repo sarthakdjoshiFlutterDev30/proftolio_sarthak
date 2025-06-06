@@ -10,18 +10,18 @@ class Protcolilo_Project extends StatefulWidget {
 
 class _Protcolilo_ProjectState extends State<Protcolilo_Project> {
   final List<String> links = [
-    "https://github.com/sarthakdjoshi/collegemgt_admin",
-    "https://github.com/sarthakdjoshi/collegemgt_student",
-    "https://github.com/sarthakdjoshi/collegemgt_teacher",
-    "https://github.com/sarthakdjoshi/Intership_Project",
-    "https://github.com/sarthakdjoshi/Users"
+    "https://github.com/sarthakdjoshiFlutterDev30/E-Commerce-Admin",
+    "https://github.com/sarthakdjoshiFlutterDev30/E-Commerce-Users",
+    "https://github.com/sarthakdjoshiFlutterDev30/expense_tracker",
+    "https://github.com/sarthakdjoshiFlutterDev30/smart_attend",
+    "https://github.com/sarthakdjoshiFlutterDev30/smart_attendance_student"
   ];
   final List<String> projectName = [
-    "College Management Admin",
-    "College Management Student",
-    "College Management Teacher",
     "E-Commerce Admin App",
-    "E-Commerce User App"
+    "E-Commerce User App",
+    "Expense-Tracker",
+    "Smart-Attendance-Admin-App",
+    "Smart-Attendance-Student-App"
   ];
 
   @override
