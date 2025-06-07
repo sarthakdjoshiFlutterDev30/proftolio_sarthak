@@ -13,7 +13,9 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
     Image.asset("asset/images/Flutter.png"),
     Image.asset("asset/images/Dart.png"),
     Image.asset("asset/images/Firebase.png"),
-    Image.asset("asset/images/FCM.png"),
+    Image.asset("asset/images/Flutter+SQFLite.png"),
+    Image.asset("asset/images/BLoC.png"),
+    Image.asset("asset/images/API-Integration.png"),
   ];
 
   @override
@@ -108,7 +110,7 @@ class _Protfolio_PageState extends State<Protfolio_Page> {
                       child: ElevatedButton(
                         onPressed: () {
                           launchURL(
-                        "https://drive.google.com/file/d/17et3661kC3ljflvAPPb25j2MAM-2O4ud/view?usp=drive_link"
+                        "https://drive.google.com/file/d/1kM-f7Am6TbIkv1Dd_IPpXPaIZ3gCx-nh/view?usp=drive_link"
                           );
                         },
                         style: ElevatedButton.styleFrom(
