@@ -27,7 +27,7 @@ class _ProtfolioCertificatesState extends State<ProtfolioCertificates> {
     "https://drive.google.com/file/d/103uwzKxorGottTwpzK_xrhgSbTrALUNw/view?usp=drive_link", // Power BI Certificate Tech tip 24
     "https://drive.google.com/file/d/106HrmZ4flZQeDdni5c96XfjHil0XBEK_/view?usp=drive_link", // Power BI Certificate Great Learning
     "https://drive.google.com/file/d/1--NSFCPQ8F14KtY-kBT4rEmhB6Tp7X6i/view?usp=sharing",//Accenture Certificate
-    "https://drive.google.com/file/d/1kM-f7Am6TbIkv1Dd_IPpXPaIZ3gCx-nh/view?usp=drive_link"//Resume
+    "https://drive.google.com/file/d/1XZmkDo9ytGiotlPEnNwty-izISHbzgv_/view?usp=drive_link"//Resume
   ];
 
   @override
