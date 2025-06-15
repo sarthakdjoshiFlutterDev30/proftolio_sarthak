@@ -20,6 +20,7 @@
     final TextEditingController _emailController = TextEditingController();
     final TextEditingController _salaryController = TextEditingController();
     final TextEditingController _descController = TextEditingController();
+    final TextEditingController _PhoneController = TextEditingController();
     Future<void> sendEmailViaEmailJS() async {
       const serviceId = 'service_tp7h73e';
       const templateId = 'template_bzrdlwd';
@@ -42,6 +43,7 @@
             'company_email': _emailController.text.toString(),
             'salary': _salaryController.text.toString(),
             'description': _descController.text.toString(),
+            "contactno":_PhoneController.text.toString()
           }
         }),
       );
@@ -63,6 +65,7 @@
           "company_email": _emailController.text.trim(),
           "company_salary": _salaryController.text.trim(),
           "company_desc": _descController.text.trim(),
+          "company_contact_no": _PhoneController.text.trim(),
           "respondid": const Uuid().v1(),
         });
         ScaffoldMessenger.of(context).showSnackBar(
@@ -73,6 +76,7 @@
         _emailController.clear();
         _salaryController.clear();
         _descController.clear();
+        _PhoneController.clear();
 
 
       } catch (e) {
@@ -132,6 +136,20 @@
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       hintText: "Salary",
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                  ), SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                  TextField(
+                    controller: _PhoneController,
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    keyboardType: TextInputType.number,
+                    maxLength: 10,
+                    decoration: const InputDecoration(
+                      hintText: "Contact No.",
                       filled: true,
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
