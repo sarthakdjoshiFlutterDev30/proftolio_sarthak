@@ -7,7 +7,7 @@ class Protfolio_Link extends StatelessWidget {
   final List<String> links = [
     "https://github.com/sarthakdjoshiFlutterDev30",
     "https://www.linkedin.com/in/sarthak-joshi-91724019b/",
-    "mailto:joshisarthakdjoshi556@gmail.com",
+    "mailto:dev.sarthak0001@gmail.com",
     "https://discord.com/channels/870179011073036380/1287652523460661319"
   ];
 

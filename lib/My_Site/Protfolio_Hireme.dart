@@ -59,6 +59,13 @@
 
     Future<void> add() async {
       try {
+        if(_nameController.text.isEmpty
+        ||_emailController.text.isEmpty
+        ||_salaryController.text.isEmpty
+        ||_descController.text.isEmpty
+        ||_PhoneController.text.isEmpty){
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Please Fill All Field"),duration: Duration(seconds: 2),));
+        }
         await FirebaseFirestore.instance.collection("Sarthak").add({
           "name": "Sarthak",
           "company_name": _nameController.text.trim(),
