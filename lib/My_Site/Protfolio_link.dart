@@ -49,7 +49,7 @@ class Protfolio_Link extends StatelessWidget {
                 leading: const CircleAvatar(
                   backgroundImage: AssetImage("asset/images/gmail.png"),
                 ),
-                title: const Text("joshisarthakdjoshi556@gmail.com"),
+                title: const Text("dev.sarthak0001@gmail.com"),
               ),
               const Divider(
                 height: 10,
