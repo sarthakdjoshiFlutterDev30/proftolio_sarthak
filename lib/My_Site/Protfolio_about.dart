@@ -1,7 +1,5 @@
-import 'dart:io';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Protfolio_About extends StatefulWidget {
   const Protfolio_About({super.key});
@@ -11,104 +9,306 @@ class Protfolio_About extends StatefulWidget {
 }
 
 class _Protfolio_AboutState extends State<Protfolio_About> {
-  final double fontSize =
-      kIsWeb ? 32 : (Platform.isAndroid || Platform.isIOS ? 23 : 32);
+  final String aboutText = '''
+I am a passionate Flutter developer with expertise in building beautiful, responsive, and high-performance mobile and web applications. With a strong foundation in software development and a keen eye for design, I create seamless user experiences that delight users.
+
+My journey in app development started with a curiosity to understand how things work under the hood, which led me to explore various technologies and frameworks. I specialize in Flutter development and have experience working with various state management solutions, APIs, and Firebase services.
+
+When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community through blog posts and tutorials.
+  ''';
+
+  final List<Map<String, String>> skills = [
+    {
+      'icon': '📱',
+      'title': 'Mobile Development',
+      'subtitle': 'Flutter, Android, iOS'
+    },
+    {
+      'icon': '🌐',
+      'title': 'Web Development',
+      'subtitle': 'Flutter Web, Responsive Design'
+    },
+    {
+      'icon': '🔌',
+      'title': 'APIs & Backend',
+      'subtitle': 'REST, GraphQL, Firebase'
+    },
+    {
+      'icon': '🎨',
+      'title': 'UI/UX Design',
+      'subtitle': 'Material Design, Custom Themes'
+    },
+  ];
+
+  final List<Map<String, String>> experience = [
+    {
+      'role': 'Flutter Developer',
+      'company': 'Your Company Name',
+      'duration': '2022 - Present',
+      'description':
+          'Developing and maintaining cross-platform mobile applications using Flutter, implementing clean architecture and best practices.'
+    },
+    {
+      'role': 'Mobile App Developer',
+      'company': 'Previous Company',
+      'duration': '2020 - 2022',
+      'description':
+          'Worked on various mobile applications, collaborating with designers and backend developers to deliver high-quality products.'
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
-      body: InteractiveViewer(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(20),
-                width: double.infinity,
-                color: Colors.black,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 10),
-                    Text(
-                      'Headline',
-                      style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                  ],
+      body: CustomScrollView(
+        slivers: [
+          // Header Section
+          SliverAppBar(
+            expandedHeight: 200.0,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                'About Me',
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24,
                 ),
               ),
-              const Divider(height: 10, color: Colors.white),
-              Container(
-                padding: const EdgeInsets.all(20),
-                width: double.infinity,
-                color: Colors.indigo,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 10),
-                    Text(
-                      "Flutter Developer | Firebase & REST API Integration | Cross-Platform App Specialist | Data-Driven Problem Solver | Open to Opportunities",
-                      style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+              background: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image.asset(
+                    'asset/images/background.jpeg',
+                    fit: BoxFit.cover,
+                    color: Colors.black.withValues(alpha: 0.6),
+                    colorBlendMode: BlendMode.darken,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.black.withValues(alpha: 0.7),
+                          Colors.transparent,
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 10),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 10),
-              Container(
-                padding: const EdgeInsets.all(20),
-                width: double.infinity,
-                color: Colors.black,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 10),
-                    Text(
-                      'About Me',
-                      style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                  ],
-                ),
-              ),
-              const Divider(height: 10, color: Colors.white),
-              Container(
-                padding: const EdgeInsets.all(20),
-                width: double.infinity,
-                color: Colors.indigo,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 10),
-                    Text(
-                      'As a highly skilled Flutter developer from Bhavnagar, I am driven by a passion for creating innovative and user-friendly mobile applications. My expertise lies in crafting high-performing apps that blend functionality with exceptional design, delivering impactful solutions for diverse clients.\n\n'
-                          'My journey in mobile app development began with a fascination for technology and problem-solving. Over the years, I have honed my skills in Flutter, Dart, Firebase, and REST API integration, enabling me to create robust cross-platform applications for Android and iOS. I am also proficient with tools like Power BI and Razorpay payment gateway, further broadening the scope of my development capabilities.\n\n'
-                          'With a strong foundation in software engineering, I excel at navigating the entire app development lifecycle—from ideation to deployment. I am detail-oriented, results-driven, and thrive in dynamic, fast-paced environments. My experience includes delivering real-time features such as audio/video calling and messaging, showcased in my e-commerce platforms, chat apps, and college management systems.\n\n'
-                          'Beyond my technical skills, I am an excellent collaborator with strong communication abilities. I work closely with clients and teammates to understand their requirements, ensuring solutions align with their expectations. My adaptability, innovative thinking, and commitment to quality make me a valuable contributor to any team.',
-                      style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
+
+          // Main Content
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // About Section
+                  Text(
+                    'Who I Am',
+                    style: GoogleFonts.poppins(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.onSurface,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    aboutText,
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      height: 1.7,
+                      color: colorScheme.onSurface.withValues(alpha: 0.8),
+                    ),
+                    textAlign: TextAlign.justify,
+                  ),
+                  const SizedBox(height: 32),
+
+                  // Skills Section
+                  Text(
+                    'My Skills',
+                    style: GoogleFonts.poppins(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.onSurface,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  GridView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: size.width > 800 ? 4 : 2,
+                      crossAxisSpacing: 16,
+                      mainAxisSpacing: 16,
+                      childAspectRatio: 1.2,
+                    ),
+                    itemCount: skills.length,
+                    itemBuilder: (context, index) =>
+                        _buildSkillCard(skills[index], context),
+                  ),
+                  const SizedBox(height: 32),
+
+                  // Experience Section
+                  Text(
+                    'Experience',
+                    style: GoogleFonts.poppins(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.onSurface,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  ...experience
+                      .map((exp) => _buildExperienceCard(exp, context))
+                      .toList(),
+                  const SizedBox(height: 32),
+
+                  // Contact Button
+                  Center(
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        // Navigate to contact page or show contact form
+                        Navigator.pushNamed(context, '/hire');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: colorScheme.primary,
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 32, vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        elevation: 4,
+                      ),
+                      icon: const Icon(Icons.mail_outline),
+                      label: const Text('Hire Me'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSkillCard(Map<String, String> skill, BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              skill['icon']!,
+              style: const TextStyle(fontSize: 32),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              skill['title']!,
+              style: GoogleFonts.poppins(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: colorScheme.onSurface,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 4),
+            Text(
+              skill['subtitle']!,
+              style: GoogleFonts.poppins(
+                fontSize: 12,
+                color: colorScheme.onSurface.withValues(alpha: 0.6),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildExperienceCard(Map<String, String> exp, BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      elevation: 2,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  exp['role']!,
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: colorScheme.primary,
+                  ),
+                ),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: colorScheme.primary.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    exp['duration']!,
+                    style: GoogleFonts.poppins(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: colorScheme.primary,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(
+              exp['company']!,
+              style: GoogleFonts.poppins(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: colorScheme.onSurface.withValues(alpha: 0.8),
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              exp['description']!,
+              style: GoogleFonts.poppins(
+                fontSize: 14,
+                color: colorScheme.onSurface.withValues(alpha: 0.7),
+                height: 1.6,
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,80 +1,113 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Protfolio_Link extends StatelessWidget {
-  Protfolio_Link({super.key});
+  const Protfolio_Link({super.key});
 
-  final List<String> links = [
-    "https://github.com/sarthakdjoshiFlutterDev30",
-    "https://www.linkedin.com/in/sarthak-joshi-91724019b/",
-    "mailto:dev.sarthak0001@gmail.com",
-    "https://discord.com/channels/870179011073036380/1287652523460661319"
+  static const List<_LinkInfo> _links = [
+    _LinkInfo(
+      title: 'GitHub',
+      subtitle: 'sarthakdjoshiFlutterDev30',
+      url: 'https://github.com/sarthakdjoshiFlutterDev30',
+      assetPath: 'asset/images/github.png',
+    ),
+    _LinkInfo(
+      title: 'LinkedIn',
+      subtitle: 'sarthak-joshi-91724019b',
+      url: 'https://www.linkedin.com/in/sarthak-joshi-91724019b/',
+      assetPath: 'asset/images/linkedin.png',
+    ),
+    _LinkInfo(
+      title: 'Email',
+      subtitle: 'dev.sarthak0001@gmail.com',
+      url: 'mailto:dev.sarthak0001@gmail.com',
+      assetPath: 'asset/images/gmail.png',
+    ),
+    _LinkInfo(
+      title: 'Discord',
+      subtitle: 'Project updates & community',
+      url: 'https://discord.com/channels/870179011073036380/1287652523460661319',
+      assetPath: 'asset/images/Discord.png',
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
     return Scaffold(
-      body: InteractiveViewer(
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              ListTile(
-                onTap: () {
-                  launchURL(links[0]);
-                },
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage("asset/images/github.png"),
+      appBar: AppBar(
+        title: const Text('Connect With Me'),
+      ),
+      body: ListView.separated(
+        padding: const EdgeInsets.all(24),
+        itemCount: _links.length,
+        separatorBuilder: (_, __) => const SizedBox(height: 16),
+        itemBuilder: (context, index) {
+          final link = _links[index];
+          return Card(
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: ListTile(
+              contentPadding: const EdgeInsets.all(16),
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage(link.assetPath),
+                backgroundColor: colorScheme.surface,
+              ),
+              title: Text(
+                link.title,
+                style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 18,
                 ),
-                title: Text(links[0]),
               ),
-              const Divider(
-                height: 10,
-              ),
-              ListTile(
-                onTap: () {
-                  launchURL(links[1]);
-                },
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage("asset/images/linkedin.png"),
+              subtitle: Text(
+                link.subtitle,
+                style: GoogleFonts.poppins(
+                  color: colorScheme.onSurface.withValues(alpha: 0.7),
+                  fontSize: 14,
                 ),
-                title: Text(links[1]),
               ),
-              const Divider(
-                height: 10,
+              trailing: Icon(
+                Icons.open_in_new_rounded,
+                color: colorScheme.primary,
               ),
-              ListTile(
-                onTap: () {
-                  launchURL(links[2]);
-                },
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage("asset/images/gmail.png"),
-                ),
-                title: const Text("dev.sarthak0001@gmail.com"),
-              ),
-              const Divider(
-                height: 10,
-              ),
-              ListTile(
-                onTap: () {
-                  launchURL(links[3]);
-                },
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage("asset/images/Discord.png"),
-                ),
-                title: const Text("All Project Info. In Discoed Channel"),
-              ),
-            ],
-          ),
-        ),
+              onTap: () => _launchLink(link.url, context),
+            ),
+          );
+        },
       ),
     );
   }
 
-  launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+  Future<void> _launchLink(String url, BuildContext context) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
-      throw 'Could not launch $url';
+      // ignore: use_build_context_synchronously
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Unable to open the link')),
+      );
     }
   }
+}
+
+class _LinkInfo {
+  const _LinkInfo({
+    required this.title,
+    required this.subtitle,
+    required this.url,
+    required this.assetPath,
+  });
+
+  final String title;
+  final String subtitle;
+  final String url;
+  final String assetPath;
 }
