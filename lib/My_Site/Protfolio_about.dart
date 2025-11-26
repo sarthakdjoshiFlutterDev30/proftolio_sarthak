@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:protfolio_sarthak/My_Site/Protfolio_Hireme.dart';
 
 class Protfolio_About extends StatefulWidget {
   const Protfolio_About({super.key});
@@ -31,27 +32,20 @@ When I'm not coding, you can find me exploring new technologies, contributing to
     {
       'icon': '🔌',
       'title': 'APIs & Backend',
-      'subtitle': 'REST, GraphQL, Firebase'
+      'subtitle': 'REST, Firebase'
     },
     {
       'icon': '🎨',
       'title': 'UI/UX Design',
-      'subtitle': 'Material Design, Custom Themes'
+      'subtitle': 'Material Design'
     },
   ];
 
   final List<Map<String, String>> experience = [
     {
-      'role': 'Flutter Developer',
-      'company': 'Your Company Name',
-      'duration': '2022 - Present',
-      'description':
-          'Developing and maintaining cross-platform mobile applications using Flutter, implementing clean architecture and best practices.'
-    },
-    {
-      'role': 'Mobile App Developer',
-      'company': 'Previous Company',
-      'duration': '2020 - 2022',
+      'role': 'Flutter Developer Intern.',
+      'company': 'Maxgen Technologies Private Limited',
+      'duration': 'Jan 2024 - June 2024',
       'description':
           'Worked on various mobile applications, collaborating with designers and backend developers to deliver high-quality products.'
     },
@@ -177,8 +171,7 @@ When I'm not coding, you can find me exploring new technologies, contributing to
                   Center(
                     child: ElevatedButton.icon(
                       onPressed: () {
-                        // Navigate to contact page or show contact form
-                        Navigator.pushNamed(context, '/hire');
+                        Navigator.push(context, MaterialPageRoute(builder: (context) =>Protfolio_Hire(),));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: colorScheme.primary,
